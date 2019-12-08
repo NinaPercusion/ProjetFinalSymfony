@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arleth Vázquez{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h2>Experiences</h2>
+
+        <div class="jumbotron text-left">
+            <ul>
+                <li type="square">
+                    Accompagnement technique et fonctionnel dans l'intialisation du projet : 
+                    <br/>
+                    mise en place du cycle technique, définition du périmètre fonctionnel, chiffrage et planification
+                </li>
+                <li type="square">
+                    Conception et réalisation de la base de données
+                </li>
+            </ul>            
+        </div>  
+    </div>
+
+    <div class="container">
+            <h3>Les technologies que je connais</h3>
+            <div class='row flex'>
+                {% for property in app %}
+                <div class=".col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href='#'>{{property.description}}</a>
+                                </h5>
+                                <p class="card-text">{{property.vesion}}</p>
+                            </div>
+                        </div>            
+                </div>
+                {% endfor %}
+            </div>
+    
+    </div>
+{% endblock %}
